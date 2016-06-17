@@ -1,0 +1,29 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Mobile Web Front-End Library",
+  "author": {
+    "name": "lam",
+    "email": "whatisurname7@gmail.com",
+    "url": ""
+  },
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "jquery.d.ts": "*",
+    "font-awesome": "^4.6.3"
+  },
+  "devDependencies": {},
+  "main": [
+    "dist/**/*"
+  ],
+  "ignore": [
+    "/.*",
+    "_config.yml",
+    "CNAME",
+    "*.md",
+    "gulpfile.js",
+    "package.json"
+  ]
+}
