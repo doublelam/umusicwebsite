@@ -36,6 +36,9 @@
 		<!-- QQ浏览器应用模式 -->
 		<meta name="x5-page-mode" content="app">
 		<link rel="stylesheet" href="../public/stylesheets/app.min.css">
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+		<![endif]-->
 	</head>
 	<body>
 		<nav class="nav">
@@ -127,10 +130,11 @@
 			</section>
 		</main>
 
-
-		<script src="../public/javascripts/jquery.min.js"></script>
+		<script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
+		<script src="../public/javascripts/jquery.min.1.js"></script>
 		<script src="../public/javascripts/jquery.mousewheel.min.js"></script>
 		<script src="../public/javascripts/typescript.min.js"></script>
+		
 		<script>
 			pgsMtd.index();
 		</script>

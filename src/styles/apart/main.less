@@ -66,7 +66,7 @@ body{
 	.video-area{
 		text-align: center;
 		.video-block{
-			margin-top: 50px;
+			height: 100%;
 			.left-direct{
 				display: inline-block;
 				vertical-align: middle;
@@ -91,8 +91,10 @@ body{
 						position: relative;
 						width: 33.3333%;
 						float: left;
+						height: 100%;
 						video{
 							vertical-align: middle;
+							height: 30%;
 						}
 						.video-describe{
 							font-size: 1.6rem;
@@ -100,11 +102,14 @@ body{
 							color: #6D6D6D;
 						}
 						.play-menu{
-							width: 100%;
 							position: absolute;
+							width: 80px;
+							height: 80px;
 							left:0;
-							top: 40%;
-							text-align: center;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							margin: auto;
 							.play-icon-container{
 								display: inline-block;
 								width: 80px;

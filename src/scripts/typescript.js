@@ -48,6 +48,43 @@ var PagesMethod = (function () {
                 setVideoDisplay(transformDiv);
             });
         }
+        function setVideoState() {
+            var viseoDom = $('.video-single-block video');
+            var playIcon = $('.play-menu');
+            viseoDom.on('mouseenter', function () {
+                $(this).prop('controls', true);
+            });
+            viseoDom.on('mouseleave', function () {
+                $(this).prop('controls', false);
+            });
+            viseoDom.on('click', function () {
+                var thisVideo = $(this);
+                if (thisVideo[0].paused) {
+                    thisVideo[0].play();
+                }
+                else {
+                    thisVideo[0].pause();
+                }
+            });
+            playIcon.on('click', function () {
+                var thisVideo = $(this).parents('.video-single-block').find('video');
+                if (thisVideo[0].paused) {
+                    thisVideo[0].play();
+                }
+                else {
+                    thisVideo[0].pause();
+                }
+            });
+            viseoDom.each(function (index) {
+                var thisIndex = $(this);
+                thisIndex[0].onplay = function () {
+                    thisIndex.parents('.video-single-block').find('.play-menu').fadeOut('fast');
+                };
+                thisIndex[0].onpause = function () {
+                    thisIndex.parents('.video-single-block').find('.play-menu').fadeIn('fast');
+                };
+            });
+        }
         function displayPages() {
             var pagesSection = $('.body-main');
             var navALink = $('.nav-direct a');
@@ -102,6 +139,7 @@ var PagesMethod = (function () {
         }
         displayVideo();
         displayPages();
+        setVideoState();
     };
     return PagesMethod;
 }());

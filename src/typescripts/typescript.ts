@@ -1,6 +1,5 @@
 /// <reference path="./jquery.d.ts" />
 
-
 class globalMethod {
 	private initNumber: number = 0;
 	numPlus(num: number): number {
@@ -22,8 +21,8 @@ class globalMethod {
 
 	constructor() {
 
-	}
-}
+	} 
+}  
 
 
 class PublicMethod {
@@ -53,6 +52,42 @@ class PagesMethod {
 				glbMtd.numPlus(1)>0?glbMtd.numMinus(1):glbMtd.getNum();
 				setVideoDisplay(transformDiv);
 			})
+		}
+
+		function setVideoState(){
+			let viseoDom = $('.video-single-block video');
+			let playIcon = $('.play-menu');
+			viseoDom.on('mouseenter',function(){
+				$(this).prop('controls',true);
+			})
+			viseoDom.on('mouseleave',function(){
+				$(this).prop('controls',false);
+			})
+			viseoDom.on('click',function(){
+				let thisVideo = $(this);
+				if(thisVideo[0].paused){
+					thisVideo[0].play();
+				}else{
+					thisVideo[0].pause();
+				}
+			});
+			playIcon.on('click',function(){
+				let thisVideo = $(this).parents('.video-single-block').find('video');
+				if(thisVideo[0].paused){
+					thisVideo[0].play();
+				}else{
+					thisVideo[0].pause();
+				}
+			});
+			viseoDom.each(function(index){
+				var thisIndex = $(this);
+				thisIndex[0].onplay = function(){
+					thisIndex.parents('.video-single-block').find('.play-menu').fadeOut('fast');
+				};
+				thisIndex[0].onpause = function(){
+					thisIndex.parents('.video-single-block').find('.play-menu').fadeIn('fast');
+				}
+			})	
 		}
 		
 		function displayPages(){
@@ -111,6 +146,7 @@ class PagesMethod {
 		
 		displayVideo();
 		displayPages();
+		setVideoState();
 	}
 	constructor() {
 		
