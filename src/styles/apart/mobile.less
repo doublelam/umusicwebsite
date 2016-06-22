@@ -1,0 +1,54 @@
+
+.nav-mobile{
+    font-size: 1.4rem;
+    padding: 10px 20px;
+    background-color: #1B1B1B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .brand-icon{
+        width: 30%;
+        img{
+            width: 100%;
+        }
+    }
+    .menu-area{
+        position: relative;
+        padding: 5px;
+        .icon-menu{
+            color: #fff;
+            font-size: 1.8rem;
+        }
+        .menu{
+            display: none;
+            transition: all .2s;
+            position: absolute;
+            display: block;
+            padding: 5px;
+            box-shadow: @shdwCls2;
+            right: 0;
+            top: 80%;
+            width: 100px;
+            text-align: center;
+            border-radius: 6px;
+            background-color: #fff;
+            menuitem{
+                display: block;
+                margin: 0;
+                padding: 10px 0;
+            }
+        }
+        .menu::before{
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 20px;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid #fff;
+            right: 7px;
+            bottom: 100%;
+        }
+    }
+}
