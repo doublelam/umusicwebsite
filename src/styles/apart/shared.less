@@ -1,0 +1,265 @@
+.share-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #000;
+    .brand-icon{
+        width: 30%;
+        img{
+            width: 100%;
+        }
+    }
+    .immediate-download{
+        background-color: transparent;
+        border: 1px solid #fff;
+        font-size: 1.4rem;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+}
+
+.personal-audio{
+    box-shadow: @shdwCls1;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+    .audio-personal-describe{
+        text-align: center;
+        padding: 10px;
+        line-height: 1.5;
+        color: #626262;
+        .iconfont{
+            font-size: 1rem;
+            vertical-align: top;
+            padding: 0 10px;
+        }
+        .icon-quota-left{
+            vertical-align: 1rem;
+        }
+        .icon-quota-right{
+            vertical-align: 2px;
+        }
+        .describe-content{
+            text-align: center;   
+            font-size: 1.4rem;
+        }
+    }
+}
+.personal-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    .avator-info{
+        flex: 1;
+        .avator-container{
+            width: 10vw;
+            height: 10vw;
+            border-radius: 50%;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+            img{
+                width: 100%;
+            }
+        }
+        .avator-describe{
+            display: inline-block;
+            vertical-align: middle;
+            .avator-name{
+                color: #626262;
+                font-size: 1.4rem;
+                margin: 0;
+            }
+            .avator-time{
+                color: #C2C2C2;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .follow-btn{
+        color: #fff;
+        background-color: #F76D73;
+        border: 1px solid transparent;
+        padding: 5px 10px;
+        border-radius: 5px;
+        .icon-guanzhu{
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+    }
+}
+.play-interface{
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .play-area{
+        position: relative;
+        .play-contain{
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            width: 25vw;
+            height: 25vw;
+            border-radius: 50%;
+            background-color: #F76E73;
+            .iconfont{
+                font-size: 2.5rem;
+                color: #fff;
+                font-weight: 100;
+                vertical-align: middle;
+            }
+        }
+        .played-number{
+            color: #D7D7D7;
+            position: absolute;
+            right: -8px;
+            bottom: -10px;
+        }
+    }
+    .like-area,.comment-area{
+        color: #D7D7D7;
+        text-align: center;
+        padding-top: 2rem;
+        .iconfont{
+            display: inline-block;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+        p{
+            margin: 0;
+        }
+    }
+}
+.controls{
+    padding: 10px 30px;
+    .process-bar{
+        position: relative;
+        .bac-process-bar{
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: #EFEFEF;
+            border-radius: 2px;
+        }
+        .front-process-bar{
+            top: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+            width: 0;
+            height: 4px;
+            background: #F76F73;
+            border-radius: 2px;         
+        }
+        .front-process-bar::after{
+            position: absolute;
+            right: 0;
+            content: '';
+            width: 10px;
+            height: 10px;
+            top: -3px;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: @shdwCls2;
+
+        }
+        .range-fake{
+            opacity: 0;
+            position: relative;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+}
+
+.time-showed{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 1.2rem;
+    #current-time{
+        color: #F76E73;
+    }
+    #fill-time{
+        color: #EFEFEF;
+    }
+}
+
+.comments-section{
+    background-color: #fff;
+    box-shadow: @shdwCls1;
+    .liked-group{
+        padding: 8px 10px;
+        border-bottom: 1px solid #eee;
+        .icon-aixin{
+            color: #F76E73;
+            font-size: 1.6rem;
+            vertical-align: middle;
+        }
+        .liked-persons{
+            display: inline-block;
+            vertical-align: middle;
+            .person-container{
+                margin: 0 3px;
+                display: inline-block;
+                width: 8vw;
+                height: 8vw;
+                overflow: hidden;
+                border-radius: 50%;
+                img{
+                    width: 100%;
+                    vertical-align: middle;
+                }
+            }
+        }
+        .like-mount{
+            color: #A2A2A2;
+        }
+    }
+    .comments-content-area{
+        padding-bottom: 20px; 
+        border-bottom: 1px solid #eee;
+        .comment-operate{
+            color: #D6D6D6;
+            font-size: 1.4rem;
+            .comment-reply{
+                margin-left: 20px;
+            }
+
+        }
+        .comment-content{
+            font-size: 1.4rem;
+            margin: 0;
+            color: #999999;
+            padding: 0 20px 0 52px;
+            .comment-para{
+                margin: 0;
+                .reply-red{
+                    color: #F76E73; 
+                }
+                .reply-name{
+                    color: #646464;
+                }
+            }
+            .second-person-info{
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .second-comment-content{
+                padding-left: 32px;
+            }
+        }
+    }
+}

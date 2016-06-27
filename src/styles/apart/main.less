@@ -101,34 +101,7 @@ body{
 							text-align: left;
 							color: #6D6D6D;
 						}
-						.play-menu{
-							position: absolute;
-							width: 80px;
-							height: 80px;
-							left:0;
-							top: 0;
-							right: 0;
-							bottom: 0;
-							margin: auto;
-							.play-icon-container{
-								display: inline-block;
-								width: 80px;
-								height: 80px;
-								background-color: rgba(255,255,255,.4);
-								border-radius: 50%;
-								transition: all .2s;
-								.fa{
-									line-height: 80px;
-									vertical-align: middle;
-									font-size: 3rem;
-									margin-left: 3px;
-									color: #fff;
-								}
-							}
-							.play-icon-container:hover{
-								background-color: rgba(255,255,255,.6);
-							}
-						}
+						
 					}
 				}
 			}
@@ -184,6 +157,10 @@ body{
 			display: inline-block;
 			vertical-align: middle;
 			margin-right: 80px;
+			width: 300px;
+			img{
+				width: 100%;
+			}
 		}
 		.product-describe{
 			text-align: left;
@@ -220,5 +197,32 @@ body{
 	}
 
 }
-
+.play-menu{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	left:0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	.play-icon-container{
+		display: inline-block;
+		width: 80px;
+		height: 80px;
+		background-color: rgba(255,255,255,.4);
+		border-radius: 50%;
+		transition: all .2s;
+		.fa{
+			line-height: 80px;
+			vertical-align: middle;
+			font-size: 3rem;
+			margin-left: 3px;
+			color: #fff;
+		}
+	}
+	.play-icon-container:hover{
+		background-color: rgba(255,255,255,.6);
+	}
+}
 
