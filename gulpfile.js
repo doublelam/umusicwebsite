@@ -22,6 +22,8 @@ const uglify = require('gulp-uglify');
 const sourcemaps = require('gulp-sourcemaps');
 const ts = require('gulp-typescript');
 const livereload = require('gulp-livereload');
+const rev = require('gulp-rev-append');
+const htmlMinify = require('gulp-minify-html');
 
 const pkg = require('./package.json');
 var date = new Date();
@@ -42,6 +44,7 @@ var toggle = {
     sourcemaps: true
 };
 var paths = {
+    html:['dist/html/*.html','dist/html/**/*.html'],
     typescripts:['src/typescripts/**/*.ts','src/typescripts/*.ts'],
     scripts: [
         'src/scripts/**/*.js','src/scripts/*.js'
@@ -66,6 +69,7 @@ var paths = {
         'components/jquery/dist/jquery.min.js'
     ],
     watchs: {
+        html:['dist/html/*.html','dist/html/**/*.html'],
         typescripts:['src/typescripts/**/*.ts','src/typescripts/*.ts'],
         scripts: ['src/scripts/*.js','src/scripts/**/*.js'],
         styles: ['src/styles/**/*.less','src/styles/*.less'],
@@ -73,6 +77,7 @@ var paths = {
     }
 };
 var dests = {
+    html:'./dist/views',
     typescripts:'src/scripts',
     styles: './dist/public/stylesheets',
     scripts: './dist/public/javascripts',
@@ -100,6 +105,12 @@ var options = {
 
 // Tasks
 // 通常情况，以下任务是不能修改的，如果遇到特殊情况需要修改，请注明！
+// html task
+gulp.task('htmls',function(){
+     gulp.src(paths.html)
+    .pipe(rev())
+    .pipe(gulp.dest(dests.html));
+})
 // typescripts
 gulp.task('typescript',function(){
     gulp.src(paths.typescripts)
@@ -184,6 +195,7 @@ gulp.task('release', function () {
 
 // Watch
 gulp.task('watch', function () {
+    gulp.watch(paths.watchs.html,['htmls']);
     // typescript
     gulp.watch(paths.watchs.typescripts,['typescript']);
     // .js files

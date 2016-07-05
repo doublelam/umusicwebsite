@@ -36,15 +36,21 @@ class PagesMethod {
 	index(): void {
 		let glbMtd = new globalMethod();
 		let newMtd = new globalMethod();
+		let videoNum:number = $('.video-single-block video').length;
+		let maxNum:number = videoNum-1;
+		$('.videos-container').css({width:videoNum*100+'%'});
+		$('.videos-container .video-single-block').css({width:100/videoNum+'%',display:'block'});
 		function setVideoDisplay(element:JQuery):void{
 			element.css({
 				'margin-left': 100 * glbMtd.getNum() + '%'
 			})
 		}
 		function displayVideo(): void {
+			
+
 			$('.video-block .right-direct').on('click', function () {
 				let transformDiv = $('.videos-display .videos-container');
-				glbMtd.numMinus(1)<-2?glbMtd.numPlus(1):glbMtd.getNum();
+				glbMtd.numMinus(1)<-maxNum?glbMtd.numPlus(1):glbMtd.getNum();
 				setVideoDisplay(transformDiv);
 			})
 			$('.video-block .left-direct').on('click', function () {

@@ -31,6 +31,10 @@ var PagesMethod = (function () {
     PagesMethod.prototype.index = function () {
         var glbMtd = new globalMethod();
         var newMtd = new globalMethod();
+        var videoNum = $('.video-single-block video').length;
+        var maxNum = videoNum - 1;
+        $('.videos-container').css({ width: videoNum * 100 + '%' });
+        $('.videos-container .video-single-block').css({ width: 100 / videoNum + '%', display: 'block' });
         function setVideoDisplay(element) {
             element.css({
                 'margin-left': 100 * glbMtd.getNum() + '%'
@@ -39,7 +43,7 @@ var PagesMethod = (function () {
         function displayVideo() {
             $('.video-block .right-direct').on('click', function () {
                 var transformDiv = $('.videos-display .videos-container');
-                glbMtd.numMinus(1) < -2 ? glbMtd.numPlus(1) : glbMtd.getNum();
+                glbMtd.numMinus(1) < -maxNum ? glbMtd.numPlus(1) : glbMtd.getNum();
                 setVideoDisplay(transformDiv);
             });
             $('.video-block .left-direct').on('click', function () {
