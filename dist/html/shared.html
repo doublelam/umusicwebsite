@@ -1,126 +1,134 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
-	<head>
-		<meta charset="utf-8">
-		<meta name="keywords" content="">
-		<meta name="description" content="">
-		<title>Start Html Title</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<meta name="renderer" content="webkit">
-		<link rel="icon" type="image/png" href="images/favicon.png">
-		<!-- 设置主屏幕信息 for 安卓 Chrome < 39 内核 -->
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="application-name" content="App Name">
-		<link rel="icon" sizes="192x192" href="images/touch/touch-icon.png">
-		<!-- 删除苹果默认的工具栏和菜单栏 -->
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<!-- 设置苹果工具栏颜色 -->
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<!-- 设置苹果工具栏标题 -->
-		<meta name="apple-mobile-web-app-title" content="App Name">
-		<!-- 忽略页面中的数字识别为电话，忽略Email识别 -->
-		<meta name="format-detection" content="telphone=no, email=no">
-		<!-- 设置苹果桌面图标 -->
-		<link rel="apple-touch-icon" href="images/touch/touch-icon.png">
-		<!-- UC浏览器强制竖屏 -->
-		<meta name="screen-orientation" content="portrait">
-		<!-- QQ浏览器强制竖屏 -->
-		<meta name="x5-orientation" content="portrait">
-		<!-- UC浏览器强制全屏 -->
-		<meta name="full-screen" content="yes">
-		<!-- QQ浏览器强制全屏 -->
-		<meta name="x5-fullscreen" content="true">
-		<!-- UC浏览器应用模式 -->
-		<meta name="browsermode" content="application">
-		<!-- QQ浏览器应用模式 -->
-		<meta name="x5-page-mode" content="app">
-		<link rel="stylesheet" href="../public/stylesheets/app.min.css?rev=@@hash">
-	</head>
-    <body style="overflow: visible">
-        <nav class="share-nav">
-            <div class="brand-icon">
-                <img src="../public/images/content/redicon.svg" alt="">
-            </div>
-            <button class="immediate-download"><a href="#">立即下载</a></button>
-        </nav>
-        <section class="personal-audio">
-            <div class="personal-info">
-                <div class="avator-info">
-                    <div class="avator-container">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>Start Html Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="renderer" content="webkit">
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<!-- 设置主屏幕信息 for 安卓 Chrome < 39 内核 -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="App Name">
+	<link rel="icon" sizes="192x192" href="images/touch/touch-icon.png">
+	<!-- 删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- 设置苹果工具栏颜色 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<!-- 设置苹果工具栏标题 -->
+	<meta name="apple-mobile-web-app-title" content="App Name">
+	<!-- 忽略页面中的数字识别为电话，忽略Email识别 -->
+	<meta name="format-detection" content="telphone=no, email=no">
+	<!-- 设置苹果桌面图标 -->
+	<link rel="apple-touch-icon" href="images/touch/touch-icon.png">
+	<!-- UC浏览器强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<!-- QQ浏览器强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<!-- UC浏览器强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- QQ浏览器强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- UC浏览器应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- QQ浏览器应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	<link rel="stylesheet" href="../public/stylesheets/app.min.css?rev=@@hash">
+</head>
+
+<body style="overflow: visible">
+	<header class="share-nav">
+		<div class="img-container">
+			<img src="../public/images/content/head-bac.jpg" alt="">
+		</div>
+		<div class="btns-area">
+			<a class="btn-download">下载</a>
+			<a class="btn-open">打开</a>
+		</div>
+	</header>
+	<section class="personal-audio">
+		<div class="audio-personal-describe">
+			<span class="describe-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,consectetuer adipiscing elit</span>
+		</div>
+		
+		<div class="play-interface personal-info">
+			<div class="avator-info">
+				<div class="avator-container">
+					<img class="avator-img" src="../public/images/del/qrcode.png" alt="">
+				</div>
+				<div class="avator-describe">
+					<p class="avator-name">名字。符合双方互</p>
+					<span class="avator-time">2天前</span>
+				</div>
+			</div>
+			<div id="play-area" class="play-area">
+				<div class="play-contain">
+					<i class="iconfont icon-bofang"></i>
+				</div>
+			</div>
+
+		</div>
+		<div class="controls">
+			<div class="process-bar">
+				<div class="bac-process-bar"></div>
+				<div class="front-process-bar"></div>
+				<input type="range" class="range-fake" max="100" step="0.1">
+			</div>
+		</div>
+		<div class="time-showed">
+			<div id="current-time">00.00</div>
+			<div id="fill-time">00.00</div>
+		</div>
+		<audio hidden id="audio-dom" src="http://fs.open.kugou.com/5e1bb8d1a55bf6726cfd8f1de19c584c/5770bff1/G008/M03/06/17/SA0DAFT6T96ICmKQAA33bVX58AcAAAS3gEEOJUADfeF348.m4a"
+			controls></audio>
+	</section>
+	<section class="comments-section">
+		<div class="liked-group">
+			<i class="iconfont icon-aixin"></i>
+			<ul class="liked-persons">
+				<li class="person-container">
+					<img src="../public/images/del/qrcode.png" alt="">
+				</li>
+				<li class="person-container">
+					<img src="../public/images/del/qrcode.png" alt="">
+				</li>
+				<li class="person-container">
+					<img src="../public/images/del/qrcode.png" alt="">
+				</li>
+				<li class="person-container">
+					<img src="../public/images/del/qrcode.png" alt="">
+				</li>
+				<li class="person-container">
+					<img src="../public/images/del/qrcode.png" alt="">
+				</li>
+				<li class="person-container">
+					<img src="../public/images/del/qrcode.png" alt="">
+				</li>
+				<li class="person-container">
+					<img src="../public/images/del/qrcode.png" alt="">
+				</li>
+			</ul>
+			<span class="like-mount">等100人</span>
+		</div>
+		<div class="comments-content-area">
+			<div class="personal-info">
+				<div class="avator-info">
+					<div class="avator-container">
 						<img class="avator-img" src="../public/images/del/qrcode.png" alt="">
 					</div>
-                    <div class="avator-describe">
-                        <p class="avator-name">名字。符合双方互</p>
-                        <span class="avator-time">2天前</span>
-                    </div>
-                </div>
-				<button class="follow-btn"><a href=""><i class="iconfont icon-guanzhu"></i>关注</a></button>
-            </div>
-            <div class="audio-personal-describe">
-                <i class="iconfont icon-quota-left"></i>
-                <span class="describe-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</span>
-                <i class="iconfont icon-quota-right"></i>
-            </div>
-			<div class="play-interface">
-				<div class="like-area">
-					<i class="iconfont icon-aixin"></i>
-					<p class="like-number">12</p>
-				</div>
-				<div id="play-area" class="play-area">
-					<div class="play-contain">
-						<i class="iconfont icon-bofang"></i>
+					<div class="avator-describe">
+						<p class="avator-name">名字。符合双方互</p>
+						<span class="avator-time">2天前</span>
 					</div>
-					<p class="played-number">12</p>
 				</div>
-				<div class="comment-area">
-					<i class="iconfont icon-comment"></i>
-					<p class="like-number">评论</p>
-				</div>
+				<div class="comment-operate"><i class="iconfont icon-aixin">&nbsp;5</i><span class="comment-reply">回复</span></div>
 			</div>
-			<div class="controls">
-				<div class="process-bar">
-					<div class="bac-process-bar"></div>
-					<div class="front-process-bar"></div>
-					<input type="range" class="range-fake" max="100" step="0.1">
-				</div>
-			</div>
-			<div class="time-showed">
-				<div id="current-time">00.00</div>
-				<div id="fill-time">00.00</div>
-			</div>
-			<audio hidden id="audio-dom" src="http://fs.open.kugou.com/5e1bb8d1a55bf6726cfd8f1de19c584c/5770bff1/G008/M03/06/17/SA0DAFT6T96ICmKQAA33bVX58AcAAAS3gEEOJUADfeF348.m4a" controls></audio>
-        </section>
-		<section class="comments-section">
-			<div class="liked-group">
-				<i class="iconfont icon-aixin"></i>
-				<ul class="liked-persons">
-					<li class="person-container">
-						<img src="../public/images/del/qrcode.png" alt="">
-					</li>
-					<li class="person-container">
-						<img src="../public/images/del/qrcode.png" alt="">
-					</li>
-					<li class="person-container">
-						<img src="../public/images/del/qrcode.png" alt="">
-					</li>
-					<li class="person-container">
-						<img src="../public/images/del/qrcode.png" alt="">
-					</li>
-					<li class="person-container">
-						<img src="../public/images/del/qrcode.png" alt="">
-					</li>
-					<li class="person-container">
-						<img src="../public/images/del/qrcode.png" alt="">
-					</li>
-					<li class="person-container">
-						<img src="../public/images/del/qrcode.png" alt="">
-					</li>
-				</ul>
-				<span class="like-mount">等100人</span>
-			</div>
-			<div class="comments-content-area">
-				<div class="personal-info">
+			<div class="comment-content">
+				<p class="comment-para">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+				<div class="personal-info second-person-info">
 					<div class="avator-info">
 						<div class="avator-container">
 							<img class="avator-img" src="../public/images/del/qrcode.png" alt="">
@@ -130,49 +138,37 @@
 							<span class="avator-time">2天前</span>
 						</div>
 					</div>
-					<div class="comment-operate"><i class="iconfont icon-aixin">&nbsp;5</i><span class="comment-reply">回复</span></div>
+					<div class="comment-operate"><span class="comment-reply">回复</span></div>
 				</div>
-				<div class="comment-content">
-					<p class="comment-para">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-					<div class="personal-info second-person-info">
-						<div class="avator-info">
-							<div class="avator-container">
-								<img class="avator-img" src="../public/images/del/qrcode.png" alt="">
-							</div>
-							<div class="avator-describe">
-								<p class="avator-name">名字。符合双方互</p>
-								<span class="avator-time">2天前</span>
-							</div>
-						</div>
-						<div class="comment-operate"><span class="comment-reply">回复</span></div>
-					</div>
-					<div class="comment-content second-comment-content">
-						<p class="comment-para"><span class="reply-red">回复</span><span class="reply-name">@xxx</span> Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-					</div>
+				<div class="comment-content second-comment-content">
+					<p class="comment-para"><span class="reply-red">回复</span><span class="reply-name">@xxx</span> Lorem ipsum dolor sit amet, consectetuer adipiscing
+						elit</p>
 				</div>
 			</div>
-			<div class="comments-content-area">
-				<div class="personal-info">
-					<div class="avator-info">
-						<div class="avator-container">
-							<img class="avator-img" src="../public/images/del/qrcode.png" alt="">
-						</div>
-						<div class="avator-describe">
-							<p class="avator-name">名字。符合双方互</p>
-							<span class="avator-time">2天前</span>
-						</div>
+		</div>
+		<div class="comments-content-area">
+			<div class="personal-info">
+				<div class="avator-info">
+					<div class="avator-container">
+						<img class="avator-img" src="../public/images/del/qrcode.png" alt="">
 					</div>
-					<div class="comment-operate"><i class="iconfont icon-aixin">&nbsp;5</i><span class="comment-reply">回复</span></div>
+					<div class="avator-describe">
+						<p class="avator-name">名字。符合双方互</p>
+						<span class="avator-time">2天前</span>
+					</div>
 				</div>
-				<div class="comment-content">
-					<p class="comment-para">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
-				</div>
+				<div class="comment-operate"><i class="iconfont icon-aixin">&nbsp;5</i><span class="comment-reply">回复</span></div>
 			</div>
-		</section>
+			<div class="comment-content">
+				<p class="comment-para">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+			</div>
+		</div>
+	</section>
 
-		<script src="../public/javascripts/sharedscript.min.js"></script>
-		<script>
+	<script src="../public/javascripts/sharedscript.min.js"></script>
+	<script>
 			sharedPage.onInit();
 		</script>
-    </body>
+</body>
+
 </html>

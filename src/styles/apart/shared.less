@@ -1,30 +1,39 @@
 .share-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 20px;
-    background-color: #000;
-    .brand-icon{
-        width: 30%;
+    .img-container{
         img{
             width: 100%;
+            vertical-align: middle;
         }
     }
-    .immediate-download{
-        background-color: transparent;
-        border: 1px solid #fff;
-        font-size: 1.4rem;
-        color: #fff;
-        padding: 5px 10px;
-        border-radius: 5px;
+    .btns-area{
+        text-align: center;
+        background-color: #000;
+        padding: 30px 0;
+        a{
+            display: inline-block;
+            width: 90px;
+            height: 32px;
+            border-radius: 14px;
+            color: #fff;
+            font-size: 1.5rem;
+            line-height: 32px;
+            margin: 0 20px;
+        }
+        .btn-download{
+            border: 1px solid transparent;
+            background-color: #9467B4;
+        }
+        .btn-open{
+            border: 1px solid #fff;
+            background-color: transparent;
+        }
     }
 }
 
 .personal-audio{
-    box-shadow: @shdwCls1;
     background-color: #fff;
-    margin-bottom: 10px;
     padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
     .audio-personal-describe{
         text-align: center;
         padding: 10px;
@@ -51,7 +60,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
+    padding: 0px 20px;
     .avator-info{
         flex: 1;
         .avator-container{
@@ -73,7 +82,7 @@
                 color: #626262;
                 font-size: 1.4rem;
                 margin: 0;
-            }
+            }      
             .avator-time{
                 color: #C2C2C2;
                 font-size: 1.2rem;
@@ -93,23 +102,23 @@
     }
 }
 .play-interface{
-    padding: 20px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
     .play-area{
         position: relative;
         .play-contain{
             display: table-cell;
             text-align: center;
             vertical-align: middle;
-            width: 25vw;
-            height: 25vw;
+            width: 12vw;
+            height: 12vw;
             border-radius: 50%;
-            background-color: #F76E73;
+            background-color: #FFD800;
             .iconfont{
-                font-size: 2.5rem;
-                color: #fff;
+                font-size: 3vw;
+                color: #000;
                 font-weight: 100;
                 vertical-align: middle;
             }
@@ -136,7 +145,7 @@
     }
 }
 .controls{
-    padding: 10px 30px;
+    padding: 0px 20px;
     .process-bar{
         position: relative;
         .bac-process-bar{
@@ -159,7 +168,7 @@
             position: absolute;
             width: 0;
             height: 4px;
-            background: #F76F73;
+            background: #9467B4;
             border-radius: 2px;         
         }
         .front-process-bar::after{
@@ -190,10 +199,10 @@
     padding: 0 30px;
     font-size: 1.2rem;
     #current-time{
-        color: #F76E73;
+        color: #9467B4;
     }
     #fill-time{
-        color: #EFEFEF;
+        color: #ccc;
     }
 }
 
@@ -202,6 +211,7 @@
     box-shadow: @shdwCls1;
     .liked-group{
         padding: 8px 10px;
+        padding-top: 20px;
         border-bottom: 1px solid #eee;
         .icon-aixin{
             color: #F76E73;
@@ -229,7 +239,7 @@
         }
     }
     .comments-content-area{
-        padding-bottom: 20px; 
+        padding: 20px 0; 
         border-bottom: 1px solid #eee;
         .comment-operate{
             color: #D6D6D6;
